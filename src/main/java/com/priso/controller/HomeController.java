@@ -30,7 +30,7 @@ public class HomeController {
 		model.addAttribute("name", "Shivam Sharma");
 		model.addAttribute("age", 29);
 		model.addAttribute("friends", friends);
-		return "index-with-model";
+		return "index-with-Model";
 	}
 
 	@RequestMapping("/technologies")
@@ -45,7 +45,26 @@ public class HomeController {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("title", "Trending Technologies");
 		modelAndView.addObject("techs", technologies);
-		modelAndView.setViewName("tech-page");
+		modelAndView.setViewName("tech-page-with-ModelAndView");
+		return modelAndView;
+	}
+
+	@RequestMapping("/continents")
+	public ModelAndView continents() {
+		System.out.println("Continents page");
+		List<String> continents = new ArrayList<>();
+		continents.add("Asia");
+		continents.add("Africa");
+		continents.add("North America");
+		continents.add("South America");
+		continents.add("Antarctica");
+		continents.add("Europe");
+		continents.add("Australia");
+
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("title", "The Seven Continents of the World");
+		modelAndView.addObject("continents", continents);
+		modelAndView.setViewName("continents-with-expression-language");
 		return modelAndView;
 	}
 }

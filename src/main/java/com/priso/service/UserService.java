@@ -13,7 +13,6 @@ public class UserService {
 	private UserDAO userDAO;
 
 	public int createUser(User user) {
-		// TODO Auto-generated method stub
 		return userDAO.saveUser(user);
 	}
 

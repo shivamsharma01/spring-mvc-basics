@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
-
+	<h3>Current Time : ${date}</h3>
     <div class="container mt-5">
     	<h2 class="text-center">Registration Form</h1>
     	<form action="processform-RequestParam" method="post">

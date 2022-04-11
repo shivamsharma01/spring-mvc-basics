@@ -1,6 +1,7 @@
 package com.priso.controller;
 
-import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,14 @@ import com.priso.model.User;
 
 @Controller
 public class ContactController {
+
+	private static SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy:H:mm");
+
+	@ModelAttribute
+	private void commonData(Model model) {
+		System.out.println("Adding common data to the model object");
+		model.addAttribute("date", dateFormatter.format(new Date()));
+	}
 
 	@RequestMapping("/contact-requestparam")
 	public String showForm() {

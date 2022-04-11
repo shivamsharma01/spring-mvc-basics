@@ -11,35 +11,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Contact Form Page</title>
+    <title>Form Submission Page</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
-    <div class="container mt-5">
-    	<h2 class="text-center">Registration Form</h1>
-    	<form action="processform" method="post">
-		  <div class="form-group">
-		    <label for="email">Email address</label>
-		    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-		  </div>
-		  <div class="form-group">
-		    <label for="username">User Name</label>
-		    <input type="text" class="form-control" id="username" placeholder="Enter Username"  name="username">
-		  </div>
-		  <div class="form-group">
-		    <label for="userPassword">User Password</label>
-		    <input type="password" class="form-control" id="userPassword" placeholder="Enter Password"  name="userpassword">
-		  </div>
-		  <div class="container text-center">
-		  	<button type="submit" class="btn btn-success">Sign Up</button>
-		  </div>
-		  
-	</form>
-    </div>
-    
-    
-    
+    <h1>Hello, The Form is Submitted</h1>  
+    <h2>${user.email}</h2>
+    <h2>${user.username}</h2>
+    <h2>${user.userPassword}</h2>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

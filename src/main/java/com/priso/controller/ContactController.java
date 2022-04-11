@@ -3,6 +3,7 @@ package com.priso.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,11 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.priso.model.User;
+import com.priso.service.UserService;
 
 @Controller
 public class ContactController {
 
 	private static SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy:H:mm");
+	@Autowired
+	private UserService service;
 
 	@ModelAttribute
 	private void commonData(Model model) {
@@ -43,7 +47,7 @@ public class ContactController {
 		 * request.getParameter("email") request.getParameter("username")
 		 * request.getParameter("password")
 		 */
-		System.out.println("Form Process Handler");
+		System.out.println("Form Process Handler RequestParam");
 		System.out.println(String.format("%s %s %s", email, username, password));
 		model.addAttribute("email", email);
 		model.addAttribute("username", username);
@@ -57,6 +61,7 @@ public class ContactController {
 		// because of using @ModelAttribute annotation and declaring the type
 		// spring implicitly sets model.addAttribute("user", user);
 		// in the jsp properties can be accessed even when they are private
+		model.addAttribute("id", service.createUser(user));
 		return "success-ModelAttribute";
 	}
 }

@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <h1>Name is Shivam2</h1>
+        <h1>Name is Shivam Sharma</h1>
         <h1>This is Home Page</h1>
         <h1>Called by home controller</h1>
         <h1>url /home</h1>

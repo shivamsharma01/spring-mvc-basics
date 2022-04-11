@@ -11,13 +11,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Form Submission Page</title>
+    <title>Form Submission Success Page</title>
   </head>
   <body>
-    <h1>Hello, The Form is Submitted</h1>  
-    <h2>${user.email}</h2>
-    <h2>${user.username}</h2>
-    <h2>${user.userPassword}</h2>
+    <h1>Hello User, The Form is Submitted</h1>  
+    <h2>Email: ${user.email}</h2>
+    <h2>Username: ${user.username}</h2>
+    <h2>Password: ${user.userPassword}</h2>
+    <h2>Generated Id: ${id}</h2>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

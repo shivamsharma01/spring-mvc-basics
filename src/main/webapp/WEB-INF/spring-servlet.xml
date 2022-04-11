@@ -14,7 +14,7 @@
 	<!-- bean definitions here -->
 	<context:component-scan base-package="com.priso"></context:component-scan>
 	<tx:annotation-driven />
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven />
 	<mvc:resources location="/WEB-INF/resources/"
 		mapping="/resources/**" />
 	<bean
@@ -59,6 +59,11 @@
 		name="hibernateTemplate">
 		<property name="sessionFactory" ref="factory"></property>
 	</bean>
+
+	<!-- Configure multipart resolver -->
+	<bean name="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		name="viewResolver">

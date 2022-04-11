@@ -1,5 +1,6 @@
 package com.priso.model;
 
+
 public class Contact {
 	private long number;
 

@@ -17,6 +17,12 @@
 	<mvc:annotation-driven />
 	<mvc:resources location="/WEB-INF/resources/"
 		mapping="/resources/**" />
+		<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/welcome"/>
+			<bean class="com.priso.interceptor.MyInterceptor"></bean>
+		</mvc:interceptor>
+		</mvc:interceptors>
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		name="ds">

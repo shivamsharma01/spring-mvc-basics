@@ -19,7 +19,7 @@
         	<c:forEach var="item" items="${continents}">
          		<li>${item}</li>
       		</c:forEach>
-        </ul>
+        </ul >
     </body>
 
     </html>

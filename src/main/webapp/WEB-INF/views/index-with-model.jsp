@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="ISO-8859-1">
-        <title>Home Page</title>
+        <title>New Home Page</title>
     </head>
 <% 	String name = (String)request.getAttribute("name"); 
 	int age = (Integer)request.getAttribute("age"); 
